@@ -2,10 +2,10 @@
 
 <ul>
   <% @tasks.each do |task| %>
-  <li><%= task.completed ? "√" : "□" %> <%= link_to task.title, task_path(task) %></li>
+  <li><%= task.completed ? "√" : "□" %> <%= link_to task.title, task %></li>
   <% end %>
 </ul>
 
 <div>
-
+  <%= link_to "Create", new_task_path %>
 </div>
