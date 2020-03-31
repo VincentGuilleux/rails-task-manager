@@ -2,8 +2,13 @@
 <p> <%= @task.completed ? "√ : task done!" : "□ : this task is not completed yet" %> </p>
 
 <div>
-  <%= link_to "Index", tasks_path %>
+  <%= link_to "Delete",
+      task_path(@task),
+      method: :delete,
+      data: { confirm: 'Are you sure?' },
+      class: 'btn btn-primary' %>
+  <%= link_to "Edit", edit_task_path, class: 'btn btn-primary' %>
+  <%= link_to "Index", :tasks, class: 'btn btn-primary' %>
 </div>
-
 
 
